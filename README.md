@@ -48,4 +48,11 @@ Some commands require the sudo command so you may be prompted for your password.
 ```
 
 If everything went well you should now have a clean MiSTer SD card which you can put into your
-MiSTer and boot from.
+MiSTer board and boot from.
+
+Once booted you will be greeted by the MiSTer interface. Attach a keyboard and make sure your
+MiSTer board is connected to the internet through the ethernet interface.
+Hit F12 on the keyboard and navigate to Scripts. Then open the #Scripts directory, select the
+update script and hit enter.
+[The MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer) will now install
+the latest versions of the MiSTer binary, the menu and the available MiSTer cores.

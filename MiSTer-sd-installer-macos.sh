@@ -25,7 +25,6 @@ DOWNLOAD_DIRECTORY=./download
 RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190119.rar'
 RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20190126'
 RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20190119.rbf'
-EXAMPLE_CORE_URL='https://github.com/MiSTer-devel/NES_MiSTer/raw/master/releases/NES_20190121.rbf'
 UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
 
 # Sanity checks
@@ -85,11 +84,6 @@ echo ""
 
 echo "Downloading and installing a recent MiSTer menu core..."
 wget -nv --progress=bar --show-progress -O /Volumes/MiSTer_Data/menu.rbf $RECENT_MENU_MISTER_URL
-echo ""
-
-echo "Downloading and installing an example core (NES)..."
-wget -N -nv --progress=bar --show-progress --directory-prefix /Volumes/MiSTer_Data/ \
-$EXAMPLE_CORE_URL
 echo ""
 
 echo "Downloading and installing the MiSTer updater script..."

@@ -3,6 +3,17 @@
 This script automates the creation of a MiSTer SD card on macOS.
 Tested on macOS Mojave 10.14.2
 
+Running this script on an empty SD card will install the following:
+* Linux OS img for the HPS.
+* A recent MiSTer binary.
+* A recent MiSTer menu core.
+* [Locutus73's awesome MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer)
+
+Once your SD card is ready you can put it into your MiSTer board, configure a controller and run
+[the MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer).
+This will install the latest versions of the MiSTer binary, the menu and the MiSTer cores.
+Make sure your MiSTer board is connected to the Internet using ethernet.
+
 ## Prerequisites
 * git (install using homebrew: brew install git)
 * wget (install using homebrew: brew install wget).

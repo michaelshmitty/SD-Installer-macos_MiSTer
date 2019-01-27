@@ -5,7 +5,7 @@ echo "# MiSTer installation script for macOS.                                   
 echo "# by Michael Smith (shmitty) <root@retrospace.be>                                  #"
 echo "#                                                                                  #"
 echo "# Shoutout to rattboi who posted Naomi Peori's MiSTer SD Card Info file on the     #"
-echo "# SmokeMonster Elite fpga-general discord channel and everyone to involved and     #"
+echo "# SmokeMonster Elite fpga-general discord channel and everyone involved and        #"
 echo "# using the MiSTer project.                                                        #"
 echo "#                                                                                  #"
 echo "# IMPORTANT: Use this script at your own risk. It WILL WIPE ALL DATA on the device #"
@@ -90,7 +90,8 @@ wget -nv --progress=bar --show-progress -O /Volumes/MiSTer_Data/menu.rbf $RECENT
 echo ""
 
 echo "Downloading and installing the MiSTer updater script..."
-wget -N -nv --progress=bar --show-progress --directory-prefix /Volumes/MiSTer_Data/ \
+mkdir -p '/Volumes/MiSTer_Data/#Scripts'
+wget -N -nv --progress=bar --show-progress --directory-prefix '/Volumes/MiSTer_Data/#Scripts' \
 $UPDATER_SCRIPT_URL
 echo ""
 

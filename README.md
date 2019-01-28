@@ -15,9 +15,9 @@ This will install the latest versions of the MiSTer binary, the menu and the MiS
 Make sure your MiSTer board is connected to the Internet using ethernet.
 
 ## Prerequisites
-* git (install using homebrew: brew install git)
-* wget (install using homebrew: brew install wget).
-* unrar (install using homebrew: brew install unrar).
+* git (install using [homebrew](https://brew.sh/): brew install git)
+* wget (install using [homebrew](https://brew.sh/): brew install wget).
+* unrar (install using [homebrew](https://brew.sh/): brew install unrar).
 
 ## Usage
 Open a terminal, clone this repository and change into the directory.

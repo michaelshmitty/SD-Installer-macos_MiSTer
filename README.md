@@ -1,7 +1,7 @@
 # MiSTer SD card installer (macOS)
 
 This script automates the creation of a MiSTer SD card on macOS.
-It covers up until [step "Get a core"](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Setup-Guide#get-a-core) in the MiSTer Wiki Setup Guide.
+It covers up until the [step "Get a core"](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Setup-Guide#get-a-core) in the MiSTer Wiki Setup Guide.
 Tested on macOS Mojave 10.14.2
 
 Running this script on an empty SD card will install the following:

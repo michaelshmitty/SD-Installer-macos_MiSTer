@@ -57,3 +57,9 @@ Hit F12 on the keyboard and navigate to Scripts. Then open the #Scripts director
 update script and hit enter.
 [The MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer) will now install
 the latest versions of the MiSTer binary, the menu and the available MiSTer cores.
+
+## Problems, issues
+If you run into any problems, [open an issue](https://github.com/michaelshmitty/SD-Installer-macos_MiSTer/issues) and I'll try to address it asap.
+
+## TODO
+* Make the script Linux compatible.

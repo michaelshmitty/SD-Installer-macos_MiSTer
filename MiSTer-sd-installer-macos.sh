@@ -25,9 +25,9 @@ DOWNLOAD_DIRECTORY=./download
 
 # TODO(m): Remove hardcoded versions.
 # URLs
-RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190206.rar'
-RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20190205'
-RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20190204.rbf'
+RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190302.rar'
+RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20190304'
+RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20190226.rbf'
 UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
 
 # Sanity checks
@@ -106,6 +106,12 @@ echo ""
 
 echo "Writing uboot image to the UBOOT partition (sudo may ask for your password)..."
 sudo dd if=${DOWNLOAD_DIRECTORY}/files/linux/uboot.img of=${DEVICE}s2 bs=64k
+echo ""
+
+echo "Disabling Spotlight indexing and removing relevant Spotlight folders..."
+mdutil -d /Volumes/MiSTer_Data
+rm -rf /Volumes/MiSTer_Data/.Spotlight-V100
+rm -rf /Volumes/MiSTer_Data/.fseventsd
 echo ""
 
 echo "Ejecting SD card (this can take a few seconds)..."

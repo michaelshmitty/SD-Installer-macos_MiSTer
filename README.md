@@ -1,14 +1,16 @@
 # MiSTer SD card installer (macOS)
 
 This script automates the creation of a MiSTer SD card on macOS.
-It covers up until the [step "Get a core"](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Setup-Guide#get-a-core) in the MiSTer Wiki Setup Guide.
+It covers up until the
+[step "Get a core"](https://github.com/MiSTer-devel/Main_MiSTer/wiki/Setup-Guide#get-a-core)
+in the MiSTer Wiki Setup Guide.
 Tested on macOS Mojave 10.14.2
 
 Running this script on an empty SD card will install the following:
 * Linux OS img for the HPS.
 * A recent MiSTer binary.
 * A recent MiSTer menu core.
-* [Locutus73's awesome MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer)
+* [Locutus73's MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer)
 
 Once your SD card is ready you can put it into your MiSTer board, configure a controller and run
 [the MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer).
@@ -59,7 +61,9 @@ update script and hit enter.
 the latest versions of the MiSTer binary, the menu and the available MiSTer cores.
 
 ## Problems, issues
-If you run into any problems, [open an issue](https://github.com/michaelshmitty/SD-Installer-macos_MiSTer/issues) and I'll try to address it asap.
+If you run into any problems,
+[open an issue](https://github.com/michaelshmitty/SD-Installer-macos_MiSTer/issues)
+and I'll try to address it asap.
 
 ## TODO
 * Make the script Linux compatible.

@@ -4,8 +4,8 @@ echo "##########################################################################
 echo "# MiSTer installation script for macOS.                                            #"
 echo "# by Michael Smith (shmitty) <root@retrospace.be>                                  #"
 echo "#                                                                                  #"
-echo "# Shoutout to rattboi who posted Naomi Peori's MiSTer SD Card Info file on the     #"
-echo "# SmokeMonster Elite fpga-general discord channel and everyone involved and        #"
+echo "# Thanks to rattboi who posted Naomi Peori's MiSTer SD Card Info file on the       #"
+echo "# SmokeMonster Elite fpga-general discord channel and everyone involved and in and #"
 echo "# using the MiSTer project.                                                        #"
 echo "#                                                                                  #"
 echo "# IMPORTANT: Use this script at your own risk. It WILL WIPE ALL DATA on the device #"
@@ -25,8 +25,8 @@ DOWNLOAD_DIRECTORY=./download
 
 # TODO(m): Remove hardcoded versions.
 # URLs
-RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190302.rar'
-RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20190304'
+RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190510.rar'
+RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20190513'
 RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20190226.rbf'
 UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
 
@@ -97,6 +97,7 @@ echo ""
 
 echo "Unmounting SD card..."
 diskutil unmountDisk ${DEVICE}
+echo ""
 echo ""
 
 echo "Fixing the SD card partition table to support UBOOT (sudo may ask for your password)..."

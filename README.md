@@ -64,6 +64,3 @@ the latest versions of the MiSTer binary, the menu and the available MiSTer core
 If you run into any problems,
 [open an issue](https://github.com/michaelshmitty/SD-Installer-macos_MiSTer/issues)
 and I'll try to address it asap.
-
-## TODO
-* Make the script Linux compatible.

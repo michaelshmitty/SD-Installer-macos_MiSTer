@@ -60,6 +60,9 @@ update script and hit enter.
 [The MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer) will now install
 the latest versions of the MiSTer binary, the menu and the available MiSTer cores.
 
+## Linux version
+Thanks to great contributions by [rwk-git](https://github.com/rwk-git) and [corttompkins](https://github.com/corttompkins) we now have [a Linux compatible version](https://raw.githubusercontent.com/michaelshmitty/SD-Installer-macos_MiSTer/master/MiSTer-sd-installer-linux.sh) of the script as well.
+
 ## Problems, issues
 If you run into any problems,
 [open an issue](https://github.com/michaelshmitty/SD-Installer-macos_MiSTer/issues)

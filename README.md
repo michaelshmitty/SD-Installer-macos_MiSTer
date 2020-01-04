@@ -1,4 +1,6 @@
-# MiSTer SD card installer (macOS)
+# MiSTer SD card installer script for macOS and Linux
+
+## macOS
 
 This script automates the creation of a MiSTer SD card on macOS.
 It covers up until the
@@ -17,12 +19,12 @@ Once your SD card is ready you can put it into your MiSTer board, configure a co
 This will install the latest versions of the MiSTer binary, the menu and the MiSTer cores.
 Make sure your MiSTer board is connected to the Internet using ethernet.
 
-## Prerequisites
+### Prerequisites
 * git (install using [homebrew](https://brew.sh/): brew install git)
 * wget (install using [homebrew](https://brew.sh/): brew install wget).
 * unrar (install using [homebrew](https://brew.sh/): brew install unrar).
 
-## Usage
+### Usage
 Open a terminal, clone this repository and change into the directory.
 
 ```bash
@@ -60,7 +62,7 @@ update script and hit enter.
 [The MiSTer update script](https://github.com/MiSTer-devel/Updater_script_MiSTer) will now install
 the latest versions of the MiSTer binary, the menu and the available MiSTer cores.
 
-## Linux version
+## Linux
 Thanks to great contributions by [rwk-git](https://github.com/rwk-git) and [corttompkins](https://github.com/corttompkins) we now have [a Linux compatible version](https://raw.githubusercontent.com/michaelshmitty/SD-Installer-macos_MiSTer/master/MiSTer-sd-installer-linux.sh) of the script as well.
 
 ## Problems, issues

@@ -31,12 +31,12 @@ print_block() {
 
 # Print a formatted error message and exit 1.
 die_with_error() {
-    error="$1"    
+    error="$1"
 
     if [[ -z $error ]]; then
         error="One or more setup commands failed.  Aborting installation."
     fi
-    
+
     print_block "ERROR: $error"
 
     exit 1
@@ -66,9 +66,9 @@ verify_absent_or_directory "$DOWNLOAD_DIRECTORY" "$MNT_DIRECTORY"
 
 # TODO(m): Remove hardcoded versions.
 # URLs
-RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20190627.rar'
-RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20191117'
-RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20191103.rbf'
+RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20200122.rar'
+RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20200308'
+RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20200115.rbf'
 UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
 
 # Sanity checks
@@ -89,7 +89,7 @@ fi
 # Check prerequisites
 check_prereqs git wget unrar mkfs.exfat
 
-# From here on, any non-zero exit code will call die_with_error().  Append any 
+# From here on, any non-zero exit code will call die_with_error().  Append any
 # line with " || true" to inhibit dying on error.
 trap die_with_error ERR
 

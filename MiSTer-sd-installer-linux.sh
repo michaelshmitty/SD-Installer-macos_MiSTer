@@ -18,6 +18,7 @@ read -rd '' splash <<_EOF_
 # * git                                                                            #
 # * wget                                                                           #
 # * unrar                                                                          #
+# * jq                                                                             #
 # * mkfs.exfat                                                                     #
 # (install using your packet manager: e.g., apt-get install git wget unrar).       #
 # (if something else is missing install it ...)                                    #
@@ -27,6 +28,12 @@ _EOF_
 echo "${splash}"
 
 [[ "${EUID}" -ne 0 ]] && { echo "Error: This script needs to be run as root" ; exit 1 ; }
+
+[[ -x "$(command -v git)" ]] || { echo "Error: git is not installed" ; exit 1 ; } 
+[[ -x "$(command -v wget)" ]] || { echo "Error: wget is not installed" ; exit 1 ; } 
+[[ -x "$(command -v unrar)" ]] || { echo "Error: unrar is not installed" ; exit 1 ; } 
+[[ -x "$(command -v jq)" ]] || { echo "Error: jq is not installed" ; exit 1 ; } 
+[[ -x "$(command -v mkfs.exfat)" ]] || { echo "Error: mkfs.exfat is not installed" ; exit 1 ; } 
 
 print_block() {
     printf '#%.0s' {1..80} ; echo
@@ -70,12 +77,16 @@ MNT_DIRECTORY="./mnt_MiSTer_Data"
 
 verify_absent_or_directory "${DOWNLOAD_DIRECTORY}" "${MNT_DIRECTORY}"
 
-# TODO(m): Remove hardcoded versions.
+RELEASE_REPO="MiSTer-devel/SD-Installer-Win64_MiSTer"
+MISTER_REPO="MiSTer-devel/Main_MiSTer"
+MENU_REPO="MiSTer-devel/Menu_MiSTer"
+UPDATER_REPO="MiSTer-devel/Updater_script_MiSTer"
+
 # URLs
-RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20200122.rar'
-RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20200308'
-RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20200115.rbf'
-UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
+RELEASE_URL="$(wget -qO- "https://api.github.com/repos/${RELEASE_REPO}/contents" | jq --raw-output '.[] | select(.name|test("release.")) | .download_url' | tail -n1)"
+RECENT_MISTER_URL="$(wget -qO- "https://api.github.com/repos/${MISTER_REPO}/contents/releases" | jq  --raw-output '.[] | select(.name|test("MiSTer_.")) | .download_url' | tail -n1)"
+RECENT_MENU_MISTER_URL="$(wget -qO- "https://api.github.com/repos/${MENU_REPO}/contents/releases" | jq  --raw-output '.[] | select(.name|test("menu_.")) | .download_url' | tail -n1)"
+UPDATER_SCRIPT_URL="$(wget -qO- "https://api.github.com/repos/${UPDATER_REPO}/contents" | jq  --raw-output '.[] | select(.name=="update.sh") | .download_url')"
 
 # Sanity checks
 if [ -z "${1}" ]; then

@@ -75,7 +75,6 @@ verify_absent_or_directory "${DOWNLOAD_DIRECTORY}" "${MNT_DIRECTORY}"
 RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20200122.rar'
 RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20200308'
 RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20200115.rbf'
-UPDATER_SCRIPT_URL='https://raw.githubusercontent.com/MiSTer-devel/Updater_script_MiSTer/master/update.sh'
 
 # Sanity checks
 if [ -z "${1}" ]; then
@@ -199,12 +198,6 @@ echo ""
 
 print_block "Downloading and installing a recent MiSTer menu core..."
 wget -nv --progress=bar --show-progress -O "${MNT_DIRECTORY}/menu.rbf" "${RECENT_MENU_MISTER_URL}"
-echo ""
-
-print_block "Downloading and installing the MiSTer updater script..."
-mkdir -p "${MNT_DIRECTORY}/#Scripts"
-wget -N -nv --progress=bar --show-progress --directory-prefix "${MNT_DIRECTORY}/#Scripts" \
-    "${UPDATER_SCRIPT_URL}"
 echo ""
 
 print_block "Syncing data to SD card before ejection"

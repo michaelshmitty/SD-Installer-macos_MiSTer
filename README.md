@@ -1,3 +1,10 @@
+# Update: Easier installation method now available
+Have a look at [Mr. Fusion, a universal MiSTer installation image](https://github.com/MiSTer-devel/mr-fusion)
+that may provide a more user friendly installation experience.
+
+That said, the script described below should still work.
+
+
 # MiSTer SD card installer script for macOS and Linux
 
 ## macOS

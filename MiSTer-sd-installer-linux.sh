@@ -172,11 +172,11 @@ echo ""
 
 print_block "Writing uboot image to the UBOOT partition" # Partition 2 (but at the start of the disk)
 UBOOT_PART="$(ls "${DEVICE}"*2)"
-sudo dd if="${DOWNLOAD_DIRECTORY}/files/linux/uboot.img" of="${UBOOT_PART}" bs=64k
+sudo dd if="${DOWNLOAD_DIRECTORY}/files/linux/uboot.img" of="${UBOOT_PART}" bs=32k
 echo ""
 
 print_block "Creating the MiSTer_Data partition" # Partition 1 (since Uboot will load Linux from Part 1, see env)
-sudo mkfs.exfat -n "MiSTer_Data" "${DEVICE}"*1
+sudo mkfs.exfat -s 32 -n "MiSTer_Data" "${DEVICE}"*1
 echo ""
 
 print_block "Syncing"

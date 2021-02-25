@@ -25,9 +25,9 @@ DOWNLOAD_DIRECTORY=./download
 
 # TODO(m): Remove hardcoded versions.
 # URLs
-RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20200122.rar'
-RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20200421'
-RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20200325.rbf'
+RELEASE_URL='https://github.com/MiSTer-devel/SD-Installer-Win64_MiSTer/raw/master/release_20200908.rar'
+RECENT_MISTER_URL='https://github.com/MiSTer-devel/Main_MiSTer/raw/master/releases/MiSTer_20210224'
+RECENT_MENU_MISTER_URL='https://github.com/MiSTer-devel/Menu_MiSTer/raw/master/releases/menu_20210222.rbf'
 
 # Sanity checks
 if [ -z "$1" ]; then

@@ -176,7 +176,9 @@ sudo dd if="${DOWNLOAD_DIRECTORY}/files/linux/uboot.img" of="${UBOOT_PART}" bs=3
 echo ""
 
 print_block "Creating the MiSTer_Data partition" # Partition 1 (since Uboot will load Linux from Part 1, see env)
-sudo mkfs.exfat -s 32 -n "MiSTer_Data" "${DEVICE}"*1
+mkfs.exfat -h 2>&1 | grep -q '\-s ' && \
+        sudo mkfs.exfat -s 32 -n "MiSTer_Data" "${DEVICE}"*1 || \
+        sudo mkfs.exfat -c 32K -L "MiSTer_Data" "${DEVICE}"*1
 echo ""
 
 print_block "Syncing"
